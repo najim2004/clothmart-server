@@ -7,6 +7,7 @@ const cors = require("cors");
 const productRoutes = require("./routes/productRoutes");
 const brandsNameRoutes = require("./routes/brandsNameRoutes");
 const allCategoriesRoutes = require("./routes/allCategoriesRoutes");
+const maxPriceRoutes = require("./routes/maxPriceRoutes");
 
 // ---------------------routes--------------------------
 
@@ -36,6 +37,7 @@ const startServer = async () => {
   app.use("/products", productRoutes);
   app.use("/all-brans-name", brandsNameRoutes);
   app.use("/all-categories", allCategoriesRoutes);
+  app.use("/max-price", maxPriceRoutes);
 
   app.get("/", (req, res) => {
     res.send("The ClothMart server is running");
