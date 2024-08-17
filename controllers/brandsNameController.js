@@ -1,4 +1,4 @@
-exports.getBrandName = async (req, res) => {
+exports.getBrandsName = async (req, res) => {
   try {
     const db = req.app.locals.db;
     const brand = await db.collection("allbrands").find().toArray();

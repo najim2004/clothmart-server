@@ -1,8 +1,14 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const connectDB = require("./config/database");
-const productRoutes = require("./routes/productRoutes");
 const cors = require("cors");
+// ---------------------routes--------------------------
+
+const productRoutes = require("./routes/productRoutes");
+const brandsNameRoutes = require("./routes/brandsNameRoutes");
+
+// ---------------------routes--------------------------
+
 dotenv.config();
 
 const app = express();
@@ -23,6 +29,7 @@ const startServer = async () => {
 
   // Routes
   app.use("/products", productRoutes);
+  app.use("/brans-name", brandsNameRoutes);
 
   app.get("/", (req, res) => {
     res.send("The ClothMart server is running");
