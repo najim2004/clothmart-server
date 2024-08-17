@@ -22,7 +22,11 @@ const startServer = async () => {
   // Global Middleware
   app.use(
     cors({
-      origin: ["http://localhost:5173", "http://localhost:5174", ,],
+      origin: [
+        "http://localhost:5173",
+        "http://localhost:5174",
+        "https://krist-603ca.web.app",
+      ],
       credentials: true,
     })
   );
@@ -30,7 +34,7 @@ const startServer = async () => {
 
   // Routes
   app.use("/products", productRoutes);
-  app.use("/brans-name", brandsNameRoutes);
+  app.use("/all-brans-name", brandsNameRoutes);
   app.use("/all-categories", allCategoriesRoutes);
 
   app.get("/", (req, res) => {
