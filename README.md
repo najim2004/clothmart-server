@@ -11,7 +11,7 @@ This project is an Express server application that connects to a MongoDB databas
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/express-server-project.git
+   git clone https://github.com/najim2004/clothmart-server.git
    cd express-server-project
    ```
 
@@ -53,7 +53,7 @@ This project is an Express server application that connects to a MongoDB databas
    yarn start
    ```
 
-   This command starts the Express server. By default, it runs on [http://localhost:5000](http://localhost:3000).
+   This command starts the Express server. By default, it runs on [http://localhost:5000](http://localhost:5000).
 
 ## Linting the Project
 
