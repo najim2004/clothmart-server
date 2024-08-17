@@ -2,11 +2,15 @@ exports.getProducts = async (req, res) => {
   try {
     const db = req.app.locals.db;
     const { page = 1, limit = 12, search = "", filters = {} } = req.query;
-    const { brand, category, priceRange, sort = "date-desc" } = filters;
+    const {
+      brand,
+      category,
+      priceRange = [0, 1000],
+      sort = "date-desc",
+    } = filters;
 
     const skip = (page - 1) * limit;
     const query = {};
-
     // Apply search query
     if (search) {
       query.productName = { $regex: search, $options: "i" };
